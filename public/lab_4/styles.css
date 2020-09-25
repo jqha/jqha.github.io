@@ -1,5 +1,11 @@
 body {
-    background-color: #4cbbd6;
+    background-color: #5d98a5;
+    font-weight: 600;
+}
+
+.header {
+    text-align: center;
+    color: white;
 }
 
 .flex-outer {
