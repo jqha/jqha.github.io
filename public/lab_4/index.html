@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Jonathan Ha Lab 4</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="header">
-                <h1>Jonathan Ha Lab 4</h1>
-        </div>
 
+<head>
+    <meta charset="UTF-8">
+    <title>Jonathan Ha Lab 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Jonathan Ha Lab 4</h1>
+    </div>
+
+    <div class="wrapper">
         <div class="container">
             <form action="/api" method="post">
                 <ul class="flex-outer">
@@ -23,15 +26,16 @@
                     </li>
                     <li>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email"> 
+                        <input type="email" id="email" name="email">
                     </li>
                     <li>
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone"> 
+                        <input type="tel" id="phone" name="phone">
                     </li>
                     <li>
                         <label for="text-field">Text Field</label>
-                        <textarea id="text-field" name="message" rows="5" cols="33" placeholder="This is some default message text."></textarea>
+                        <textarea id="text-field" name="message" rows="5" cols="33"
+                            placeholder="This is some default message text."></textarea>
                     </li>
                     <li>
                         <p>Age</p>
@@ -56,5 +60,7 @@
                 </ul>
             </form>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
