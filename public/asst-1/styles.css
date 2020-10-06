@@ -1,0 +1,103 @@
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, input, li {
+    font-family: 'Cabin', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #991818;
+    text-shadow: #17B042 -1px 1px; 
+    color: #F4FFEE;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #54FF85;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 960px;
+}
+
+.image-cap {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 0 1 auto;
+    margin-right: 15px;
+    width: 199px;
+}
+
+.image-cap p {
+    background: #F4FFEE;  
+    border: 1px dotted #17B042;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.image {
+    border: 1px solid #17B042;
+    border-radius: 4px;
+    width: inherit;
+}
+
+.list-text {
+    flex: 2 0 auto;
+    background-color: #F4FFEE;
+    border: dashed #17B042;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.list-text h2 {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.gamingdevices h2 {
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1000px) { 
+.image-cap {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    justify-content: space-evenly;
+}
+
+.list-text {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 2 auto;
+    margin: 15px;
+    margin-top: 0px;
+}
+
+.container {
+    justify-content: center;
+}
+}
