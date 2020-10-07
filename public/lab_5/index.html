@@ -38,7 +38,7 @@
                             placeholder="This is some default message text."></textarea>
                     </li>
                     <li>
-                        <p>Age</p>
+                        <p class="checkbox-list-label">Age</p>
                         <ul class="flex-inner">
                             <li>
                                 <input type="checkbox" id="eighteen-to-thirtyfive" name="eighteen-to-thirtyfive">
@@ -56,11 +56,42 @@
                     </li>
                     <li>
                         <button type="submit" id="submit" name="submit">Submit Form</button>
+                        <button type="button" id="activate" name="active" onclick="lab5Changes()">Activate</button>
                     </li>
                 </ul>
             </form>
         </div>
     </div>
+    <script>
+        function lab5Changes() {
+            fetch('/api')
+                .then((response) => response.text())
+                .then((response) => {
+                    //Change header
+                    const hdr = document.querySelector('.header h1');
+                    hdr.innerHTML = response;
+                    //Change background color
+                    const bgc = 'rgb(' + Math.round(Math.random() * 255)
+                        + ',' + Math.round(Math.random() * 255) + ','
+                        + Math.round(Math.random() * 255) + ')';
+                    document.body.style.backgroundColor = bgc;
+                    //Center Form
+                    let listElements = document.getElementsByClassName('flex-outer');
+                    for (let i = 0; i < listElements.length; i++) {
+                        listElements[i].style.margin = '0 auto';
+                    }
+                    //Change Checkbox Label to Fruits
+                    const checkboxListLabel = document.querySelector('.checkbox-list-label');
+                    checkboxListLabel.innerHTML = 'Fruits';
+                    //Change checkbox labels
+                    let fruitsList = ["Apple", "Orange", "Pineapple"];
+                    let checkboxItems = document.querySelectorAll('.flex-inner li label');
+                    for (let j = 0; j < checkboxItems.length; j++) {
+                        checkboxItems[j].innerHTML = fruitsList[j];
+                    }
+                })
+        }
+    </script>
 </body>
 
 </html>
