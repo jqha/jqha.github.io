@@ -16,6 +16,25 @@ describe('Lab 7', () => {
     cy.fixture('test_values').then((json) => {
       const labUrl = `${json.test_context || ''}/lab_7/`;
       cy.visit(labUrl); // change URL to match your dev URL
+    });
+  });
+
+  context('HTML Layout', () => {
+    it('Successfully loads with valid HTML', () => {
+      cy.htmlvalidate();
+    });
+
+    it('Contains a page title with your name in it', () => {
+      cy.fixture('test_values').then((json) => {
+        cy.get('head title')
+          .contains(json.name);
+      });
+    });
+
+    it('Contains a header element with your name in it', () => {
+      cy.fixture('test_values').then((json) => {
+        cy.get('.header h1')
+          .contains(json.name);
       });
     });
 
